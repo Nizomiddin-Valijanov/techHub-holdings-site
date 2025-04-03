@@ -1,7 +1,7 @@
-import HeroSection from "@/components/hero-section";
-import FeaturedProducts from "@/components/featured-products";
-import CategoryShowcase from "@/components/category-showcase";
-import TestimonialSection from "@/components/testimonial-section";
+import HeroSection from "@/components/hero-section"
+import FeaturedProducts from "@/components/featured-products"
+import CategoryShowcase from "@/components/category-showcase"
+import TestimonialSection from "@/components/testimonial-section"
 
 export default function Home() {
   return (
@@ -13,5 +13,6 @@ export default function Home() {
         <TestimonialSection />
       </div>
     </div>
-  );
+  )
 }
+

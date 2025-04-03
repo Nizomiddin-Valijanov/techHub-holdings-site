@@ -4,31 +4,32 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/providers/language-provider";
-import tower_image from "@/assets/towels-image.jpg";
-import granite_image from "@/assets/granite-image.jpg";
-import materials_image from "@/assets/construction-materials.jpg";
+
+import granite from "@/assets/granite-image.jpg";
+import towels from "@/assets/towels-image.jpg";
+import construction from "@/assets/construction-materials.jpg";
 
 export default function CategoryShowcase() {
   const { t } = useLanguage();
 
-  // Sample categories
+  // Sample categories with placeholder images
   const categories = [
     {
       name: t("category.marbleTiles"),
       description: t("categories.marbleDesc"),
-      image: tower_image,
+      image: granite,
       slug: "marble-tiles",
     },
     {
       name: t("category.granite"),
       description: t("categories.graniteDesc"),
-      image: granite_image,
+      image: towels,
       slug: "granite",
     },
     {
       name: t("category.constructionMaterials"),
       description: t("categories.constructionDesc"),
-      image: materials_image,
+      image: construction,
       slug: "construction-materials",
     },
   ];
@@ -59,9 +60,7 @@ export default function CategoryShowcase() {
               <h3 className="mb-2 text-2xl font-bold">{category.name}</h3>
               <p className="mb-4 max-w-xs">{category.description}</p>
               <Button asChild>
-                <Link href={`/catalog/${category.slug}`}>
-                  {t("categories.explore")}
-                </Link>
+                <Link href={`/catalog`}>{t("categories.explore")}</Link>
               </Button>
             </div>
           </div>

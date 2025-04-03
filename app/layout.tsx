@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "TechHub Holding - Premium Marble Tiles & Construction Materials",
   description:
     "Discover high-quality marble tiles and construction materials for your projects. Professional solutions for engineers and homeowners.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -38,6 +38,8 @@ export default function RootLayout({
     </html>
   )
 }
+
+import "./globals.css"
 
 
 
